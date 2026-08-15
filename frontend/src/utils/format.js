@@ -1,0 +1,15 @@
+export function formatCurrency(value) {
+  const number = Number(value) || 0;
+
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0
+  }).format(number);
+}
+
+export function formatNumber(value) {
+  const number = Number(value) || 0;
+
+  return new Intl.NumberFormat("en-IN").format(number);
+}
