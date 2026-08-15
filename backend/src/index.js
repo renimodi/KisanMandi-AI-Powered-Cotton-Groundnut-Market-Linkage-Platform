@@ -2,6 +2,13 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
+const marketRoutes = require("./routes/market");
+const buyerRoutes = require("./routes/buyers");
+const advisorRoutes = require("./routes/advisor");
+const qualityRoutes = require("./routes/quality");
+const incomeRoutes = require("./routes/income");
+const dashboardRoutes = require("./routes/dashboard");
+
 const app = express();
 
 app.use(cors());
@@ -14,6 +21,13 @@ app.get("/", (req, res) => {
     status: "running"
   });
 });
+
+app.use("/api/market", marketRoutes);
+app.use("/api/buyers", buyerRoutes);
+app.use("/api/advisor", advisorRoutes);
+app.use("/api/quality", qualityRoutes);
+app.use("/api/income", incomeRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 const PORT = process.env.PORT || 5000;
 
