@@ -1,8 +1,11 @@
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
     <div>
+      <Navbar />
+
       <header>
         <h1>🌾 KisanMandi AI</h1>
         <p>
