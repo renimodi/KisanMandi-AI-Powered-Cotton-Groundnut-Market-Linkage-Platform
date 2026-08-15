@@ -98,3 +98,22 @@ th {
   color: #92400e;
   border-radius: 8px;
 }
+header a:hover {
+  background: #dcfce7;
+}
+
+main {
+  line-height: 1.6;
+}
+
+section p {
+  color: #4b5563;
+}
+
+section ul {
+  padding-left: 25px;
+}
+
+section li {
+  line-height: 1.8;
+}
